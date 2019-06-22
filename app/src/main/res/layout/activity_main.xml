@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu"/>
+
+        <ImageButton
+            android:id="@+id/powerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="klickpowerbtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnScan"
+            app:srcCompat="@android:drawable/ic_lock_power_off" />
+
+
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="klickChannelScan"
+        android:text="Scan Channels"
+        app:layout_constraintTop_toBottomOf="@+id/powerButton"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageButton
+        android:id="@+id/playbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_media_next"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        android:onClick="klickplaybtn"/>
+
+    <ImageButton
+        android:id="@+id/rshiftbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_media_ff"
+        app:layout_constraintLeft_toRightOf="@id/playbtn"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        android:onClick="klickrshiftbtn" />
+
+    <ImageButton
+        android:id="@+id/lshiftbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_media_rew"
+        app:layout_constraintRight_toLeftOf="@id/playbtn"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        android:onClick="klicklshiftbtn"/>
+
+    <Button
+        android:id="@+id/VolumeDownbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume -"
+        android:onClick="klickVolumeDownbtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lshiftbtn"/>
+
+    <Button
+        android:id="@+id/VolumeUpbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume +"
+        android:onClick="klickVolumeUpbtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/VolumeDownbtn"/>
+
+    <ImageButton
+        android:id="@+id/zoomInbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="klickzoomInbtn"
+        app:srcCompat="@android:drawable/btn_plus"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/VolumeUpbtn"
+        app:layout_constraintBottom_toTopOf="@id/VolumeDownbtn"
+         />
+
+    <ImageButton
+        android:id="@+id/zoomOutbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="klickzoomOutbtn"
+        app:srcCompat="@android:drawable/btn_minus"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/VolumeDownbtn"
+        app:layout_constraintTop_toBottomOf="@id/zoomInbtn"
+        app:layout_constraintBottom_toTopOf="@id/rshiftbtn"/>
+
+    <ImageButton
+        android:id="@+id/pipbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="klickpipbtn"
+        app:srcCompat="@android:drawable/ic_menu_crop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnScan"/>
+
+    <ImageButton
+        android:id="@+id/debugbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="klickdebugbtn"
+        app:srcCompat="@android:drawable/ic_menu_manage"
+        app:layout_constraintLeft_toRightOf="@id/killbtn"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/killbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="klickkillbtn"
+        app:srcCompat="@android:drawable/ic_notification_overlay"
+        app:layout_constraintLeft_toRightOf="@id/powerButton"
+        app:layout_constraintBottom_toTopOf="@id/btnScan"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/zoomPipbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zoom Pip"
+        android:onClick="klickzoomPipbtn"
+        app:layout_constraintLeft_toRightOf="@id/pipbtn"
+        app:layout_constraintTop_toBottomOf="@id/btnScan" />
+
+    <ImageButton
+        android:id="@+id/zappUpbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:onClick="klickzappUpbtn"
+        app:layout_constraintRight_toLeftOf="@id/VolumeUpbtn"
+        app:layout_constraintBaseline_toBaselineOf="@id/VolumeUpbtn"
+        app:layout_constraintBottom_toTopOf="@id/lshiftbtn"/>
+
+    <ImageButton
+        android:id="@+id/zappDownbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="klickzappDownbtn"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        app:layout_constraintRight_toLeftOf="@id/VolumeDownbtn"
+        app:layout_constraintBottom_toTopOf="@id/lshiftbtn" />
+
+
+</android.support.constraint.ConstraintLayout>

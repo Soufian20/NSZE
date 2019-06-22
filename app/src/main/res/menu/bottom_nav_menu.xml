@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_Home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/navigation_Liste"
+        android:icon="@drawable/ic_list_black_24dp"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:title="Liste"/>
+
+    <item
+        android:id="@+id/navigation_Favoriten"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:title="Favoriten"/>
+
+    <item
+        android:id="@+id/navigation_PipListe"
+        android:icon="@drawable/ic_playlist_add_black_24dp"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:title="PipListe"/>
+
+</menu>
